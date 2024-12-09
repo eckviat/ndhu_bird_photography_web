@@ -32,8 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, {
-        rootMargin: '-10% 0px -10% 0px', // 提前 100px 時觸發離場
-        threshold: 0.1 // 當 10% 的元素可見時觸發
+        rootMargin: '20% 0px 0% 0px', // 提前 100px 時觸發離場
+        threshold: 0.8 // 當 10% 的元素可見時觸發
     });
 
     // 將每個目標元素添加到 Observer 中
