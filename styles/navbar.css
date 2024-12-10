@@ -1,0 +1,55 @@
+
+.navbar {
+    background-color: rgba(78, 101, 116, 0.7); /* 半透明背景 */
+    top: 0;
+    width: 100%;         /* 占滿寬度 */
+}
+
+.navbar .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    list-style: none;
+    align-items: center;
+    overflow: hidden; /* 隱藏溢出的內容 */
+    max-height: 0; /* 預設高度為0，隱藏 */
+    transition: max-height 0.5s ease-in-out; /* 動畫過渡效果 */
+}
+
+.navbar .menu.active {
+    max-height: 300px; /* 展開時的最大高度，可依需求調整 */
+    padding: 0 0 10px 0;
+}
+
+.navbar .menu li {
+    width: 100%; /* 占滿整列寬度 */
+}
+
+.navbar .menu li a {
+    text-decoration: none;
+    color: #F2EBD5;
+    font-size: 16px;
+    text-align: center;
+}
+
+.navbar .menu li a:hover {
+    color: #F5D033;
+}
+
+/* 菜單按鈕 */
+.navbar .menu-toggle {
+    display: none;
+    background-color: rgba(78, 101, 116, 0.7); /* 背景顏色與選單一致 */
+    border: none;
+    font-size: 16px; /* 調整字型大小與選單一致 */
+    color: #F2EBD5;
+    cursor: pointer;
+    width: 100%; /* 占滿整列寬度 */
+    padding: 10px 0; /* 與選單一致的內距 */
+    text-align: center; /* 文字置中 */
+    transition: background-color 0.3s ease, color 0.3s ease; /* 添加背景色與文字色的漸變效果 */
+}
+
+.navbar .menu-toggle:hover {
+    color: #F5D033;
+}

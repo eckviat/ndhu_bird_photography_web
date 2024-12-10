@@ -1,0 +1,31 @@
+:root {
+    --primary-color: #1b6597;
+    --secondary-color: #4D6473;
+    --background-color: rgba(242, 235, 213, 20%);
+}
+
+a {
+    color: var(--primary-color);
+    font-size: 1em;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2fa3f0;
+}
+
+
+.end-of-paragraph::after
+{
+    content: "";
+    display: block;
+    height: 50px;
+}
+
+p::before, p::after
+{
+    content: "";
+    display: block;
+    height: 10px;
+}

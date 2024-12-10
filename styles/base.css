@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'NotoSerifTC';
+    src: url('../fonts/NotoSerifTC-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: NotoSerifTC;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    scroll-behavior: smooth;
+}

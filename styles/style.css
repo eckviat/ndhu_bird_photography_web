@@ -1,239 +1,9 @@
-@charset "UTF-8";
-
-@font-face {
-    font-family: 'NotoSerifTC';
-    src: url('../fonts/NotoSerifTC-SemiBold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-* {
-    font-family: NotoSerifTC;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html, body {
-    background-color: #f2ebd5;
-    background-image: url("../images/DSCN2875.jpg");
-	background-attachment: fixed; /* 固定背景圖片 */
-    background-position: center;
-    background-size: cover;
-    height: 100vh;       /* 高度佔滿視窗 */
-    width: 100vw;        /* 寬度佔滿視窗 */
-    margin: 0;           /* 移除外邊距 */
-    text-align: center;  /* 文字居中對齊 */
-    overflow-x: hidden;    /* 隱藏滾動條 */
-    scroll-behavior: smooth; /* 啟用平滑滾動 */
-}
-
-main {
-    background-color: rgba(242, 235, 213, 20%);
-    padding: 60px;
-    line-height: 2em;
-    color: #4D6473;
-    display: flex;              /* 使用 flex 排版 */
-    justify-content: center;    /* 垂直方向居中 */
-}
-
-.container {
-    width: 90%;
-    max-width: 800px;
-    padding: 100px;
-    background-color: rgba(242, 235, 213, 0.85);
-    text-align: left;
-    margin: 20px auto;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-
-    /* 初始狀態 */
-    opacity: 0; /* 完全透明 */
-    transform: translateY(40px); /* 向下位移 20px */
-    transition: opacity 1.5s ease, transform 1.5s ease; /* 添加過渡效果 */
-}
-
-/* 加入類名觸發浮出效果 */
-.container.show {
-    opacity: 1; /* 完全顯現 */
-    transform: translateY(0); /* 回到原位 */
-}
-
-.centered-box {
-    color: #4D6473;
-    position: relative;          /* 絕對定位子容器 */
-    top: 50%;                    /* 距離父容器頂部 50% */
-    left: 50%;                   /* 距離父容器左側 50% */
-    transform: translate(-50%, -50%);  /* 向上、向左移動 50% 寬高，達到精確置中 */
-    text-align: center;          /* 水平置中 */
-}
-
-.centered-box h1 {
-    text-align: center;
-    color: #1b6597;
-    margin-bottom: 20px;
-}
-
-.centered-box p, br {
-    font-size: 1em;
-    margin-bottom: 16px;
-    color: #4D6473;
-}
-
-/* 初始狀態 */
-.fade-in {
-    opacity: 0; /* 預設為透明 */
-    transform: translateY(40px); /* 向下位移 */
-    transition: opacity 0.6s ease, transform 0.6s ease; /* 添加過渡效果 */
-}
-
-/* 顯示時的狀態 */
-.fade-in.show {
-    opacity: 1; /* 逐漸顯現 */
-    transform: translateY(0); /* 回到原位 */
-}
-
-/* 隱藏時的狀態 */
-.fade-in.hide {
-    opacity: 0;
-    transform: translateY(-40px); /* 向上位移 */
-}
-
-h1::after
-{
-    content: "";
-    display: block;
-    height: 50px;
-}
-
-p::before, p::after
-{
-    content: "";
-    display: block;
-    height: 10px; /* 控制段落之間的間距 */
-}
-
-a {
-    color: #1b6597;
-    font-size: 1em;
-    text-align: center;
-    transition: color 0.3s ease; /* 添加顏色變化的過渡效果 */
-}
-
-a:hover {
-    color: #2fa3f0;
-}
-
-::selection {
-    background-color: rgb(27, 101, 151, 0.5); /* 反白的背景顏色 */
-    color: #ffffff; /* 反白時的文字顏色 */
-}
-
-/* 滾動條容器 */
-::-webkit-scrollbar {
-    display: none;
-    width: 10px; /* 垂直滾動條寬度 */
-}
-
-/* 滾動條滑塊 */
-::-webkit-scrollbar-thumb {
-    background: #888; /* 滑塊的顏色 */
-    border-radius: 5px; /* 圓角效果 */
-}
-
-/* 滾動條背景 */
-::-webkit-scrollbar-track {
-    background: rgba(242, 235, 213, 20%); /* 背景顏色 */
-}
-
-.footer {
-    background-color: rgba(77, 100, 115, 0.6);
-    padding: 10px;
-    font-size: 12px;
-    color: #F2EBD5;
-    height: 50px;
-    width: 100%;
-    position: relative;  /* 保持 footer 貼緊底部 */
-}
-
-.navbar {
-    background-color: rgba(78, 101, 116, 0.7); /* 半透明背景 */
-    top: 0;
-    width: 100%;         /* 占滿寬度 */
-}
-
-.navbar .menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    list-style: none;
-    align-items: center;
-    overflow: hidden; /* 隱藏溢出的內容 */
-    max-height: 0; /* 預設高度為0，隱藏 */
-    transition: max-height 0.5s ease-in-out; /* 動畫過渡效果 */
-}
-
-.navbar .menu.active {
-    max-height: 300px; /* 展開時的最大高度，可依需求調整 */
-    padding: 0 0 10px 0;
-}
-
-.navbar .menu li {
-    width: 100%; /* 占滿整列寬度 */
-}
-
-.navbar .menu li a {
-    text-decoration: none;
-    color: #F2EBD5;
-    font-size: 16px;
-    text-align: center;
-}
-
-.navbar .menu li a:hover {
-    color: #F5D033;
-}
-
-/* 菜單按鈕 */
-.navbar .menu-toggle {
-    display: none;
-    background-color: rgba(78, 101, 116, 0.7); /* 背景顏色與選單一致 */
-    border: none;
-    font-size: 16px; /* 調整字型大小與選單一致 */
-    color: #F2EBD5;
-    cursor: pointer;
-    width: 100%; /* 占滿整列寬度 */
-    padding: 10px 0; /* 與選單一致的內距 */
-    text-align: center; /* 文字置中 */
-    transition: background-color 0.3s ease, color 0.3s ease; /* 添加背景色與文字色的漸變效果 */
-}
-
-.navbar .menu-toggle:hover {
-    color: #F5D033;
-}
-
-/* 圓形超連結圖片的基礎樣式 */
-.circle-link {
-    position: relative;
-    display: inline-block;
-    width: 150px; /* 初始圓形寬度 */
-    height: 150px; /* 初始圓形高度 */
-    overflow: hidden;
-    border-radius: 50%; /* 裁切成圓形 */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 圓形放大和陰影動畫 */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 基礎陰影效果 */
-}
-
-/* 圓形內的圖片 */
-.circle-link img {
-    width: 100%; /* 圖片寬度適應圓形 */
-    height: 100%; /* 圖片高度適應圓形 */
-    object-fit: cover; /* 保持圖片比例 */
-    transition: transform 0.3s ease; /* 圖片放大動畫 */
-}
-
-/* 滑鼠移到圓形圖片上的效果 */
-.circle-link:hover {
-    transform: scale(1.2); /* 圓形整體放大 1.2 倍 */
-}
+@import url('base.css');
+@import url('components.css');
+@import url('layout.css');
+@import url('navbar.css');
+@import url('theme.css');
+@import url('utilities.css');
 
 /* 大螢幕的橫向選單 */
 @media (min-width: 769px) {
@@ -260,6 +30,10 @@ a:hover {
 }
 
 @media (max-width: 767px) {
+    main {
+        font-size: 0.9em;
+    }
+
     .navbar {
         display: flex;
         flex-direction: column;
@@ -285,6 +59,6 @@ a:hover {
 
     .container {
         margin: 20px;
-        padding: 100px 10px;
+        padding: 50px 20px;
     }
 }

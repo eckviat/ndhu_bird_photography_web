@@ -1,0 +1,69 @@
+html, body {
+    background-color: #f2ebd5;
+    background-image: url("../images/DSCN2875.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+main {
+    background-color: rgba(242, 235, 213, 20%);
+    padding: 60px;
+    line-height: 2em;
+    color: #4D6473;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    padding: 100px;
+    background-color: rgba(242, 235, 213, 0.85);
+    margin: 20px auto;
+    text-align: left;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.container.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.centered-box {
+    color: #4D6473;
+    position: relative;          /* 絕對定位子容器 */
+    top: 50%;                    /* 距離父容器頂部 50% */
+    left: 50%;                   /* 距離父容器左側 50% */
+    transform: translate(-50%, -50%);  /* 向上、向左移動 50% 寬高，達到精確置中 */
+    text-align: center;          /* 水平置中 */
+}
+
+.centered-box h1 {
+    text-align: center;
+    color: #1b6597;
+    margin-bottom: 20px;
+}
+
+.centered-box p, br {
+    font-size: 1em;
+    margin-bottom: 16px;
+    color: #4D6473;
+}
+
+.footer {
+    background-color: rgba(77, 100, 115, 0.6);
+    padding: 10px;
+    font-size: 12px;
+    color: #F2EBD5;
+    height: 50px;
+    width: 100%;
+    position: relative;
+}
