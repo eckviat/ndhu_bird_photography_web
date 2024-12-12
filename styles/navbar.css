@@ -53,3 +53,16 @@
 .navbar .menu-toggle:hover {
     color: #F5D033;
 }
+
+/* 初始導覽列隱藏樣式 */
+.navbar.hidden {
+    opacity: 0; /* 隱藏時透明度為 0 */
+    pointer-events: none; /* 禁止互動 */
+    transition: opacity 0.8s ease; /* 過渡動畫 */
+}
+
+/* 顯示導覽列 */
+.navbar.visible {
+    opacity: 1; /* 完全顯示 */
+    pointer-events: auto; /* 啟用互動 */
+}

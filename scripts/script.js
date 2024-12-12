@@ -32,4 +32,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 將每個目標元素添加到 Observer 中
     fadeInElements.forEach(el => observer.observe(el));
+
+    const overlay = document.querySelector('.fullscreen-overlay');
+    const dismissButton = document.querySelector('.dismiss-button');
+    const navbar = document.querySelector('.navbar');
+    const mainContent = document.querySelector('#main-content');
+
+    // 點擊按鈕後觸發動畫
+    dismissButton.addEventListener('click', (e) => {
+        e.preventDefault(); // 防止默認跳轉
+        overlay.classList.add('hidden'); // 背景模糊與消失
+
+        navbar.classList.remove('hidden'); // 移除 hidden 類
+        navbar.classList.add('visible'); // 添加 visible 顯示類
+        
+        mainContent.classList.add('show'); // 顯示主內容
+    });
 });
