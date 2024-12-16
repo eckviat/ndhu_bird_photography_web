@@ -29,3 +29,32 @@ p::before, p::after
     display: block;
     height: 10px;
 }
+
+i {
+    font-size: 2em;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+i.ig{
+    color: #C13584;
+}
+
+i.ig:hover{
+    color: #eb52a9;
+}
+
+i.git{
+    color: #181717;
+}
+
+i.git:hover{
+    color: #0366d6;
+}
+
+.divider {
+    border: 0;
+    height: 2px;
+    background: #aaa; /* 分隔線顏色 */
+    margin: 20px 0;    /* 上下間距 */
+}

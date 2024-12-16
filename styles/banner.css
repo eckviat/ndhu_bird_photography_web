@@ -21,10 +21,19 @@
 }
 
 /* 文字樣式 */
-.welcome-text {
+.fullscreen-overlay h1 {
     font-size: 3rem;
     color: white;
-    margin-bottom: 20px;
+    text-shadow: 
+        0px 0px 10px rgba(0, 0, 0, 1);
+}
+
+.fullscreen-overlay h2 {
+    font-size: 2em;
+    color: white;
+    margin-bottom: 50px;
+    text-shadow: 
+        0px 0px 10px rgba(0, 0, 0, 1);
 }
 
 /* 按鈕樣式 */
@@ -37,6 +46,7 @@
     border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
 }
 
 .dismiss-button:hover {

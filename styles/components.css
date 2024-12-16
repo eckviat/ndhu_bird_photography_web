@@ -23,19 +23,59 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.circle-link img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
 .circle-link.show {
     opacity: 1;
 }
 
 .circle-link.hide {
     opacity: 0;
+}
+
+.circle-link.no-animation {
+    transform: none;
+}
+
+.circle-link.no-animation:hover {
+    transform: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-wrapper .hover-image {
+    opacity: 0;
+}
+
+.circle-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease opacity 0.8s ease-in-out;
+}
+
+.circle-link .hover-image {
+    opacity: 0; 
+}
+
+.circle-link:hover .hover-image {
+    opacity: 1; 
+}
+
+.circle-link:hover .normal-image {
+    opacity: 0; 
 }
 
 .circle-link:hover {

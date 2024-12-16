@@ -1,0 +1,91 @@
+/* 基本設置 */
+.photo-text-section {
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* 框架間距 */
+    padding: 20px;
+}
+
+.photo-text-section .photo-text-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* 初始隱藏 */
+    transform: translateX(-100px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.photo-text-box {
+    background-color: rgba(255, 0, 0, 0.8); /* 添加淡色背景 */
+    margin: 20px 0; /* 增加區塊間距 */
+    border-radius: 10px; /* 圓角 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加陰影 */
+}
+
+.photo-text-section .photo-text-box.reverse {
+    flex-direction: row-reverse; /* 左右對稱 */
+    transform: translateX(100px);
+}
+
+.photo-text-section .photo {
+    flex: 1;
+    max-width: 50%;
+    overflow: hidden;
+}
+
+.photo-text-section .photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px; /* 圓角 */
+}
+
+.photo-text-section .text {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.photo-text-section .text h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.photo-text-section .text h2 {
+    font-size: 1.5rem;
+    color: gray;
+    margin-bottom: 15px;
+}
+
+.photo-text-section .text p {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* 響應式設計：小於 768px 時上下排列 */
+@media (max-width: 768px) {
+    .photo-text-section .photo-text-box,
+    .photo-text-section .photo-text-box.reverse {
+        flex-direction: column;
+        transform: translateX(-100px); /* 從左側滑入 */
+    }
+
+    .photo-text-section .photo {
+        max-width: 100%;
+    }
+
+    .photo-text-section .text {
+        text-align: center;
+    }
+}
+
+/* 滑入效果 */
+.photo-text-section .slide-in-left.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.photo-text-section .slide-in-right.show {
+    opacity: 1;
+    transform: translateX(0);
+}
