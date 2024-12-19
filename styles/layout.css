@@ -46,18 +46,6 @@ main {
     text-align: center;          /* 水平置中 */
 }
 
-.centered-box h1 {
-    text-align: center;
-    color: #1b6597;
-    margin-bottom: 20px;
-}
-
-.centered-box p, br {
-    font-size: 1em;
-    margin-bottom: 16px;
-    color: #4D6473;
-}
-
 .footer {
     background-color: rgba(77, 100, 115, 0.6);
     padding: 10px;

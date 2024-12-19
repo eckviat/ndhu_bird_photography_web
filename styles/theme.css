@@ -16,6 +16,17 @@ a:hover {
 }
 
 
+h1 {
+    color: #1b6597;
+    margin-bottom: 20px;
+}
+
+p, br {
+    font-size: 1em;
+    margin-bottom: 16px;
+    color: #4D6473;
+}
+
 .end-of-paragraph::after
 {
     content: "";
