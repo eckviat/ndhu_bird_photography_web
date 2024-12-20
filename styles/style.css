@@ -6,6 +6,7 @@
 @import url('photo.css');
 @import url('theme.css');
 @import url('utilities.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600&display=swap');
 
 /* 大螢幕的橫向選單 */
 @media (min-width: 769px) {

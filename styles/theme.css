@@ -21,6 +21,10 @@ h1 {
     margin-bottom: 20px;
 }
 
+h2 {
+    color: #4D6473;
+}
+
 p, br {
     font-size: 1em;
     margin-bottom: 16px;
