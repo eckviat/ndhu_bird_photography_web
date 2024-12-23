@@ -15,7 +15,7 @@
 }
 
 /* 第一個 .photo-text-box 的樣式 */
-.photo-text-box:first-of-type {
+.photo-text-box.special {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,7 +31,7 @@
     transition: opacity 1.5s ease, transform 1.5s ease;
 }
 
-.photo-text-box:first-of-type.show {
+.photo-text-box.special.show {
     transform: translateY(0px);
 }
 
@@ -132,7 +132,7 @@
         order: 1; /* 文字排在左側 */
         flex: 1;
         padding-right: 20px; /* 增加左右間距 */
-        text-align: right;
+        text-align: left;
     }
 
     /* 圖片樣式 */

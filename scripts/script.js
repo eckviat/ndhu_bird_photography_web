@@ -45,4 +45,12 @@ document.addEventListener('DOMContentLoaded', () => {
         
         mainContent.classList.add('show');
     });
+
+    const fadeInTexts = document.querySelectorAll('.fade-in-text');
+
+    fadeInTexts.forEach((el, index) => {
+        setTimeout(() => {
+            el.classList.add('show');
+        }, index * 200);
+    });
 });

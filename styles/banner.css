@@ -53,6 +53,18 @@
     background-color: white;
     color: black;
 }
+/* 初始模糊樣式 */
+.fade-in-text {
+    opacity: 0;
+    filter: blur(10px); /* 初始模糊程度 */
+    transition: opacity 1s ease, filter 1s ease; /* 動畫效果 */
+}
+
+/* 清晰樣式 */
+.fade-in-text.show {
+    opacity: 1;
+    filter: blur(0); /* 變為清晰 */
+}
 
 /* 主內容樣式 */
 #main-content {
