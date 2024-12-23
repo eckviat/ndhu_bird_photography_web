@@ -92,6 +92,7 @@
         width: 100%; /* 填滿容器 */
         height: auto;
         margin-bottom: 20px; /* 圖片與文字的間距 */
+        border-radius: 10px;
     }
 }
 
